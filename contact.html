@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Contact Page</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+            color: #5A5A5A;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #CCD5AE;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: #FEFAE0;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #E0E5B6;
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about-me, .family, .friends {
+            background-color: #FAEDCE;
+            border-radius: 12px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Contact form styles */
+        .contact-form {
+            background-color: #FEFAE0;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #CCD5AE;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #CCD5AE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #A3B18A;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #CCD5AE;
+            color: #FEFAE0;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #FEFAE0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <a href="index.html">
+        <img src="home/logo.png" alt="Logo">
+        <nav>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="friends.html">Friends</a>
+            
+        </nav>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Me</h2>
+        <p>I'd love to hear from you! Feel free to drop a message below.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+<br><br><br><br><br><br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nurul Ain | All right reserved | <a href="index.html">Back to Top</a></p>
+    </footer>
+</body>
+</html>

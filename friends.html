@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+        }
+
+        header {
+    background: #3e2b2b; /* Dark brown color */
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #FFFFFF;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('home/somel.JPG') no-repeat center center/cover;
+            height: 600px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .feature {
+            flex: 1;
+            margin: 0 15px;
+            animation: fadeIn 1.5s;
+        }
+
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            animation: slideIn 1.5s;
+        }
+
+        .portfolio {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+        }
+
+        .portfolio img {
+            width: 18%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <header>
+        <a href="index.html">
+            <img src="home/logo.png" alt="Logo" length="50" width="50">
+        </a>
+        <nav>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero"></section>
+
+    <h1 id="animated-header" style="text-align: center; font-size: 2.5em; opacity: 0; transform: translateY(-20px); transition: opacity 1s, transform 1s;">
+        Companies in Time
+    </h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.getElementById("animated-header");
+            setTimeout(() => {
+                header.style.opacity = 1;
+                header.style.transform = "translateY(0)";
+            }, 500);
+        });
+    </script>
+    
+<section class="features">
+        <div class="feature">
+            <h3>VIDEO 1</h3>
+            <p>Memories of Sem 1 & Sem 2</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="friend/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>VIDEO 2</h3>
+            <p>Memories of sem 3</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="friend/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>VIDEO 3</h3>
+            <p>Memories of Sem 4 & Sem 5</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="friend/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+<style>
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 20px;
+        text-align: center;
+        background: #F1F7DC;
+    }
+
+    .feature {
+        flex: 1;
+        margin: 0 15px;
+    }
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        max-width: 100%; /* Ensure the video doesn't overflow */
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid #333; /* Optional: Add a border */
+    }
+</style>
+
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About My Friend</h2>
+        <p>My best friends are my life’s greatest treasure. They are the sunshine on my cloudy days and the unwavering pillars of strength when I stumble. With their boundless kindness, infectious laughter, and hearts full of love, they make life beautiful. Through every joy and sorrow, they stand by me, reminding me what true friendship really means. ❤️</p>
+    </section>
+
+
+<section class="portfolio">
+    <div class="image-container">
+        <img src="friend/smk.png" alt="Portfolio 1">
+        <div class="description">SMK Friends - A snapshot of precious school life with friends.</div>
+    </div>
+    <div class="image-container">
+        <img src="friend/fared.png" alt="Portfolio 2">
+        <div class="description">Fared - Always there to light up the room with his smile.</div>
+    </div>
+    <div class="image-container">
+        <img src="friend/mate.png" alt="Portfolio 3">
+        <div class="description">Best Buddies - Unforgettable moments with my closest friends.</div>
+    </div>
+    <div class="image-container">
+        <img src="friend/mirror.png" alt="Portfolio 4">
+        <div class="description">Groupmate Buddies - Your go-to team for tackling tasks, sharing laughs, and making every project a little easier and a lot more fun! Together, you grow, bond, and succeed.</div>
+    </div>
+    
+</section>
+
+<style>
+    .portfolio {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 20px;
+    }
+
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 18%;
+        border-radius: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.1);
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        opacity: 0; /* Hidden by default */
+        transition: opacity 0.3s ease;
+        font-size: 0.9em;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .image-container:hover .description {
+        opacity: 1; /* Show description on hover */
+    }
+</style>
+
+
+
+   
+
+
+
+
+</body>
+</html>
+

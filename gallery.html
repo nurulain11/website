@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header {
+            background-color: #3e2723; /* Dark brown */
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        header .logo {
+            width: 80px; /* Adjust logo size */
+            height: auto;
+        }
+        header nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: #007bff;
+        }
+        .header-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .section {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: slideUp 1s ease-in-out;
+        }
+        .section h2 {
+            color: #007bff;
+        }
+        .section img {
+            max-width: 100%; /* Ensures image uses its original size or scales down */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 8px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer {
+            background-color: #3e2723; /* Dark brown */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with logo, title "My Gallery" and navigation -->
+    <header>
+        <!-- Logo -->
+        <img src="home/logo.png" alt="Logo" class="logo">
+
+        <!-- "My Gallery" Title in the header -->
+        <h1 align="center">My Gallery</h1>
+        
+        <!-- Navigation links aligned to the right -->
+        <nav>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="friend.html">Friends</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Header Image -->
+    <img src="home/tenang.jpg" alt="Header Image" class="header-image">
+
+    <div class="container">
+
+        <!-- Gallery Section -->
+        <div class="section">
+            <h2>Gallery</h2>
+            <p>Explore some of my favorite images captured during my adventures.</p>
+            <img src="gallery/sulam.png" alt="Gallery Image 1">
+            <img src="gallery/kuning.png" alt="Gallery Image 2">
+            <img src="gallery/kulim.png" alt="Gallery Image 3">
+            <img src="gallery/food.png" alt="Gallery Image 4">
+            <img src="gallery/koko.png" alt="Gallery Image 6">
+            <img src="gallery/penyu.png" alt="Gallery Image 7">
+            <img src="gallery/batu.png" alt="Gallery Image 8">
+        </div>
+
+    </div>
+
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Nurul Ain. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

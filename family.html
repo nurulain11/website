@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Little Universe</title>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+      background-size: 400% 400%;
+      animation: backgroundShift 10s infinite alternate ease-in-out;
+    }
+
+    /* Header Styling */
+    header {
+      background: url('home/tenang.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background-size: cover;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0 20px;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 50px 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      background-color: #CD5C5C;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #FAFAD2;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+
+       .sections-table {
+            display: table;
+            width: 100%;
+            border-spacing: 20px;
+            padding: 20px;
+        }
+
+        .section-row {
+            display: table-row;
+        }
+
+        .section-cell {
+            display: table-cell;
+            vertical-align: top;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 0 auto;
+            max-width: 800px;
+    }
+
+    section:hover {
+      transform: scale(1.05);
+    }
+
+    #sunshine { background-image: url('sunshine-image.jpg'); }
+    #moonlight { background-image: url('moonlight-image.jpg'); }
+    #family { background-image: url('family-image.jpg'); }
+
+    /* Animations */
+    @keyframes backgroundShift {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Fade-In Scroll Effect */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+    }
+
+    /* Image hover effect */
+    .animated-image {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .animated-image:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+     <a href="index.html">
+    <img src="home/logo.png" alt="Logo" length="50" width="50">
+    <a href="aboutme.html">About Me</a>
+     <a href="friends.html">Friends</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Our Little Universe</h1>
+    <p>Where family and love always shine</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Our Journey</h2>
+    <p>Exploring the beauty of family, togetherness, and adventure</p>
+    <a href="#family" class="cta" onclick="playVideo()">Explore Now</a>
+  </section>
+
+<!-- Background Sound Section -->
+<section id="background-sound">
+  
+  <!-- Audio element for background sound -->
+  <audio id="backgroundAudio" loop>
+    <source src="song/lofi.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Play/Stop Button -->
+  <button id="toggleButton" class="audio-button" onclick="toggleAudio()">Play Music</button>
+</section>
+
+<!-- CSS -->
+<style>
+  /* Section styling */
+  #background-sound {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* Button Styling */
+  .audio-button {
+    background-color: #4E3629; /* Dark brown color */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Ensure button stays on top of other elements */
+  }
+
+  .audio-button:hover {
+    background-color: #7A5537; /* Lighter brown color */
+    transform: scale(1.1); /* Slight grow effect */
+  }
+
+  /* Aesthetic sound description */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4E3629;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById('backgroundAudio');
+    const button = document.getElementById('toggleButton');
+
+    if (audio.paused) {
+      audio.play();
+      button.innerText = 'Stop Music'; // Change button text when audio is playing
+    } else {
+      audio.pause();
+      button.innerText = 'Play Music'; // Change button text when audio is paused
+    }
+  }
+</script>
+
+
+  
+ <!-- Parents Section -->
+
+<!-- CSS -->
+<style>
+  /* Google Font for aesthetic header */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+  /* Apply dark brown color to all text */
+  * {
+    color: #4E3629; /* Dark brown color */
+    font-family: 'Arial', sans-serif; /* Default font for the body */
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif; /* Aesthetic font for the header */
+    font-size: 2.5em; /* Adjust size for the header */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+</style>
+
+ <!-- Parents Section -->
+<section id="family">
+  <h2>My Family</h2>
+  <p>
+    <p style="text-align: justify;">
+    This is my family, the heart of my world. I treasure every moment spent with them, from the quiet mornings to the bustling evenings filled with laughter. I hope that no matter where life takes us, we will always find our way back to one another, united in love. Together, we create a bond that I wish would last forever, a bond that transcends time and distance. In their presence, I find warmth, comfort, and a love so pure, it feels as though it was meant to be everlasting.
+  </p>
+  <div class="slider-container">
+    <div class="image-slider">
+      <img src="family/abah.jpg" alt="Photo 1" class="slider-image">
+      <img src="family/fam.jpg" alt="Photo 2" class="slider-image">
+      <img src="family/air.jpg" alt="Photo 3" class="slider-image">
+      <img src="family/hi.jpg" alt="Photo 4" class="slider-image">
+      <img src="family/ibuabah.jpg" alt="Photo 5" class="slider-image">
+      <img src="family/hiho.jpg" alt="Photo 6" class="slider-image">
+      <img src="family/happy.jpg" alt="Photo 7" class="slider-image">
+      <img src="family/cameron.jpg" alt="Photo 7" class="slider-image">
+      <img src="family/raya.jpg" alt="Photo 7" class="slider-image">
+      <img src="family/mekah.jpg" alt="Photo 7" class="slider-image">
+      <img src="family/raya.jpg" alt="Photo 7" class="slider-image">
+      <img src="family/pp.jpeg" alt="Photo 7" class="slider-image">
+      <img src="family/tok.jpeg" alt="Photo 7" class="slider-image">
+      <img src="family/couple.jpeg" alt="Photo 7" class="slider-image">
+      <img src="family/fun.jpeg" alt="Photo 7" class="slider-image">
+    </div>
+    <button class="slider-button left" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="slider-button right" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+  .slider-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    animation: slideAnimation 15s linear infinite; /* Auto slide every 15 seconds */
+  }
+
+  .slider-image {
+    width: 200px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Hover effect transition */
+  }
+
+  .slider-image:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .slider-button.left {
+    left: 10px;
+  }
+
+  .slider-button.right {
+    right: 10px;
+  }
+
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Animation for sliding images */
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-220px); /* Slide 1 image width */
+    }
+    40% {
+      transform: translateX(-440px); /* Slide 2 images width */
+    }
+    60% {
+      transform: translateX(-660px); /* Slide 3 images width */
+    }
+    80% {
+      transform: translateX(-880px); /* Slide 4 images width */
+    }
+    100% {
+      transform: translateX(0); /* Return to the start */
+    }
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  let currentIndex = 0;
+  let isAnimating = false; // Prevent overlapping animations
+
+  function changeSlide(direction) {
+    const slider = document.querySelector('.image-slider');
+    const totalImages = document.querySelectorAll('.slider-image').length;
+    const slideWidth = 220; // Image width (200px) + gap (10px)
+
+    if (isAnimating) return; // Prevent new slide changes during animation
+    isAnimating = true;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = totalImages - 1;
+    } else if (currentIndex >= totalImages) {
+      currentIndex = 0;
+    }
+
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    setTimeout(() => (isAnimating = false), 500); // Allow next change after animation completes
+  }
+</script>
+
+
+<!-- CSS -->
+<style>
+  .slider-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-slider {
+    display: flex;
+    gap: 10px; /* Adds spacing between images */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+    width: max-content; /* Automatically adjusts width to fit content */
+  }
+
+  .slider-image {
+    width: 200px; /* Adjust width of each image */
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Hover effect transition */
+  }
+
+  .slider-image:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .slider-button.left {
+    left: 10px;
+  }
+
+  .slider-button.right {
+    right: 10px;
+  }
+
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  let currentIndex = 0;
+  let isAnimating = false; // Prevent overlapping animations
+
+  function changeSlide(direction) {
+    const slider = document.querySelector('.image-slider');
+    const totalImages = document.querySelectorAll('.slider-image').length;
+    const slideWidth = 220; // Image width (200px) + gap (10px)
+
+    if (isAnimating) return; // Prevent new slide changes during animation
+    isAnimating = true;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = totalImages - 1;
+    } else if (currentIndex >= totalImages) {
+      currentIndex = 0;
+    }
+
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    setTimeout(() => (isAnimating = false), 500); // Allow next change after animation completes
+  }
+</script>
+
+
+
+ <!-- Siblings and Cousin Section -->
+<section id="us">
+  <h2>My Support System</h2>
+  <p style="text-align: justify;">
+  </p>
+
+  <!-- Image and Explanation Grid -->
+  <div class="image-grid">
+    <style>
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for smaller images */
+        gap: 20px;
+      }
+
+      .image-item {
+        text-align: center;
+        position: relative;
+      }
+
+      .image-item img {
+        width: 100%;
+        max-width: 300px; /* Reduced size */
+        height: auto;
+        aspect-ratio: 1 / 1; /* Square ratio */
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      /* Hover effect */
+      .image-item img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Title style */
+      .image-description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Hidden title initially */
+      .image-title {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      /* Show title on hover */
+      .image-item:hover .image-title {
+        display: block;
+      }
+    </style>
+
+    <!-- Image Items with Titles that Appear on Hover -->
+    <div class="image-item">
+      <img src="family/abahku.jpg" alt="Abah">
+      <div class="image-title"> Abah</div>
+    </div>
+    <div class="image-item">
+      <img src="family/ibu.png" alt="Ibu">
+      <div class="image-title">Ibu</div>
+    </div>
+    <div class="image-item">
+      <img src="family/kakak.jpg" alt="Kakak and Husband">
+      <div class="image-title">My Kakak and Her Husband</div>
+    </div>
+    <div class="image-item">
+      <img src="family/fateh.jpg" alt="Ahmad Fateh">
+      <div class="image-title">My Niece: Ahmad Fateh</div>
+    </div>
+    <div class="image-item">
+      <img src="family/lutfi.png" alt="Ahmad Lutfi">
+      <div class="image-title">My Niece: Ahmad Lutfi</div>
+    </div>
+    <div class="image-item">
+      <img src="family/kakngah.jpg" alt="Kakngah and Husband">
+      <div class="image-title">My Kakngah and Her Husband</div>
+    </div>
+    <div class="image-item">
+      <img src="family/afiyah.jpg" alt="Qurratul Aafiyah">
+      <div class="image-title">My Niece: Qurratul Aafiyah</div>
+    </div>
+    <div class="image-item">
+      <img src="family/aisyah.jpg" alt="Naura Aisyah">
+      <div class="image-title">My Niece: Naura Aisyah</div>
+    </div>
+    <div class="image-item">
+      <img src="family/abang.jpg" alt="Abang">
+      <div class="image-title">My Abang</div>
+    </div>
+    <div class="image-item">
+      <img src="family/acu.jpg" alt="Maksu">
+      <div class="image-title">My Aunt: Maksu</div>
+    </div>
+    <div class="image-item">
+      <img src="family/shifa.jpg" alt="Shifa">
+      <div class="image-title">Cousin: Shifa</div>
+    </div>
+    <div class="image-item">
+      <img src="family/husna.jpg" alt="Husna">
+      <div class="image-title">Cousin: Husna</div>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+</html>

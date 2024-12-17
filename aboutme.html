@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+      background-size: 400% 400%;
+      animation: backgroundShift 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Styling */
+    header {
+      background: url('wall.png') no-repeat center center/cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: slideInDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease-in-out 0.5s;
+    }
+
+    header .cta {
+      padding: 10px 30px;
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      animation: bounceIn 1s ease-in-out 0.8s;
+    }
+
+    header .cta:hover {
+      background-color: #e05c51;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0 20px;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    /* About Section */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #fff;
+      animation: fadeIn 2s ease-in-out;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Animations */
+    @keyframes slideInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* Enhanced Background Animation */
+    @keyframes glowEffect {
+      0% {
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255, 105, 180, 1);
+      }
+      100% {
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      }
+    }
+
+    /* Animation for hover effect */
+    .animated-image {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .animated-image:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+     <a href="index.html">
+    <img src="home/logo.png" alt="Logo" length="50" width="50">
+    <a href="#about">About Me</a>
+    <a href="vibes.html">Vibes & Interests</a>
+    <a href="family.html">Family</a>
+    <a href="friends.html">Friends</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to My World</h1>
+    <p>
+      Discover more about who I am, what I love, and how I cherish life's moments.
+    </p>
+    <a href="#about" class="cta">Learn More</a>
+  </header>
+
+  <!-- About Section -->
+<section id="about" style="display: flex; align-items: center;">
+  
+    <div style="flex: 1; padding: 20px;">
+        <h2>About Me</h2>
+        <p>
+          <p style="text-align: justify;">
+Hello! My name is Nurul Ain. I’m a person who cherishes meaningful connections with family and friends. 
+<br><br>
+I was born on April 11, 2004, at Seberang Jaya Hospital, Penang. I am the youngest of four siblings. Growing up as the youngest, I’ve always had the support and love of my family, which has shaped me into who I am today—a person full of gratitude and dreams.
+<br><br>
+I really love cats, and I have three of them at home named Aboy, Bibi, and Miko. They each have their own personality and make my days happier. I also enjoy cooking and trying out new recipes, especially when I get to share the food with my family. I like keeping my house clean and tidy because it feels nice to have everything in order. Traveling is another thing I enjoy a lot, as it’s always exciting to visit new places, see different things, and spend time with the people I care about.
+<br><br>
+I am someone who enjoys trying new things because I believe it can provide valuable experiences and help me learn a lot in life. However, I often feel scared or hesitant whenever I want to try something outside of my comfort zone. This fear usually comes from worrying that I might not do well or make mistakes. Despite this, I try to overcome my fears by reminding myself that trying is an important part of learning and growing. Every small step I take helps me become braver and more confident in facing new challenges.
+<br>
+        </p>
+    </div>
+
+   
+    <div style="flex: 1; text-align: center;">
+        <img src="myself/full.png" alt="About Me" class="animated-image" style="max-width: 100%; height: auto;">
+    </div>
+</section>
+
+
+<style>
+    .animated-image {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s, transform 0.6s;
+    }
+
+    .animated-image.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #about {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+</style>
+
+<!-- JavaScript untuk Scroll Animation -->
+<script>
+    document.addEventListener("scroll", function () {
+        const image = document.querySelector(".animated-image");
+        const imagePosition = image.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (imagePosition < screenHeight) {
+            image.classList.add("visible");
+        }
+    });
+</script>
+
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Level</title>
+  <style>
+    /* Add animation for text fade-in */
+    #school h2, #school p {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    /* Animation for image fade-in and zoom */
+    #school img {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: zoomIn 2s forwards;
+    }
+
+    /* Fade-in animation for text */
+    @keyframes fadeIn {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Zoom-in animation for image */
+    @keyframes zoomIn {
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Add smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Style for scrolling effect */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+<!-- Education Level Section -->
+<section id="education" class="fade-in-on-scroll">
+  <h2>Education Level</h2>
+
+  <!-- First Image and Explanation -->
+  <div class="image-text-container">
+    <img src="myself/smk.jpg" alt="Image 1" class="image-left" width="500" height="auto">
+    <div class="explanation-right">
+      <h3>Secondary School</h3>
+      <p>
+        <p style="text-align: justify;">
+        I completed my secondary education at SMK Sri Muda, where I pursued the Science Stream. During this time, I delved into subjects like Additional Mathematics, Physics, and Chemistry, which sharpened my analytical thinking and problem-solving skills. This solid foundation not only enhanced my understanding of complex concepts but also ignited my curiosity for technology and innovation, paving the way for my academic journey in Information Management at UITM Kedah.
+      </p>
+    </div>
+  </div>
+
+  <!-- Second Image and Explanation -->
+  <div class="image-text-container reverse">
+    <div class="explanation-left">
+      <h3>My First Diploma</h3>
+      <p>
+        <p style="text-align: justify;">
+       I am currently studying Information Management at UITM Kedah, where I have developed a strong foundation in programming. My academic journey is driven by a passion for technology and communication, and I am eager to apply the skills I’ve gained to real-world scenarios. I am particularly interested in exploring how digital strategies and innovative technologies can shape the future of communication and information management.
+      </p>
+    </div>
+    <img src="myself/kedah.jpg" alt="Image 2" class="image-right" width="500" height="auto">
+  </div>
+
+</section>
+
+<!-- JavaScript for Scroll Animation -->
+<script>
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.fade-in-on-scroll');
+    sections.forEach(function(section) {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionBottom = section.getBoundingClientRect().bottom;
+      if (sectionTop < window.innerHeight && sectionBottom >= 0) {
+        section.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+<!-- CSS Styling -->
+<style>
+  /* Basic Styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  section#education {
+    margin: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  /* Image and Text Container */
+  .image-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .image-left, .image-right {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 1s, transform 1s;
+  }
+
+  /* Explanation Text */
+  .explanation-left, .explanation-right {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .explanation-left h3, .explanation-right h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .explanation-left p, .explanation-right p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Reverse Layout for Alternate Arrangement */
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Animation Classes */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+  }
+
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+
+
+
+</body>
+</html>

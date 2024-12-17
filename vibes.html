@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibes</title>
+  <style>
+    .section3 {
+  padding: 30px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 1200px; /* Match other sections' width */
+}
+
+.section3 h2 {
+  font-size: 2.5rem; /* Match heading size */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section3 p {
+  font-size: 1.2rem; /* Match paragraph text size */
+  color: #555;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.section3 video {
+  max-width: 100%; /* Make video responsive and consistent */
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section3 img {
+  max-width: 45%; /* Match image size in other sections */
+  height: auto;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Header Styling */
+    header {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+
+    /* Navigation Styling */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1em;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #FEFAE0;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #ff6f61;
+      font-weight: bold;
+    }
+
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+      color: #333;
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    /* Gradient Background for Sections */
+    .section1 {
+      background: linear-gradient(135deg, #CCD5AE, #E0E5B6, #FAEDCE, #FEFAE0);
+    }
+
+    .section2 {
+      background: linear-gradient(135deg, #FEFAE0, #FAEDCE, #E0E5B6, #CCD5AE);
+    }
+
+    .section3 {
+      background: linear-gradient(135deg, #FAEDCE, #FEFAE0, #CCD5AE, #E0E5B6);
+    }
+
+    /* Content Styling */
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    section p {
+      margin-bottom: 20px;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    /* Scroll Animation */
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      section {
+        padding: 40px 20px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#section1">Hobby</a>
+    <a href="#section2">Favourite Song</a>
+    <a href="#section3">What I Like To Do</a>
+  </nav>
+
+ <!-- Section 1: Hobby -->
+<section class="section1" id="section1">
+
+  <center>
+    <h2>My Hobby</h2>
+    <p>
+      <p style="text-align: justify;">
+      I love immersing myself in nature through hiking, capturing breathtaking photographs that tell stories of the world’s beauty, and exploring underwater wonders while snorkeling. These activities bring me joy, inspire creativity, and fuel my sense of adventure, allowing me to connect deeply with the natural world around me.
+    </p>
+    <img src="myself/hiking.png" alt="Welcome Image" class="animate-fade">
+    <img src="myself/me.png" alt="Welcome Image" class="animate-slide">
+  </center>
+</section>
+
+<style>
+  /* Base Section Styling */
+  .section1 {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+
+  .section1 h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section1 p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .section1 img {
+    max-width: 45%;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Animation Styles */
+  .animate-fade {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+
+  .animate-slide {
+    transform: translateX(-100%);
+    animation: slideIn 2s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+
+ <!-- Section 2: Favourite Song -->
+<<section class="section2" id="section2">
+  <center>
+   <h2>My Favourite Song</h2>
+   <p style="text-align: justify;">
+      Music has always been a source of inspiration and comfort for me, and these three songs hold a special place in my heart. "Reminisensi" by Insomniacks resonates deeply with its nostalgic and dreamy vibes, evoking memories and emotions that feel both personal and universal.<br><br>
+      "Rahsia Tuhan" by Noh Salleh, with its soulful melody and poetic lyrics, is a beautiful reflection on life’s mysteries and the divine secrets that shape our paths.<br><br>
+      "Masing-Masing" by Erni Zakri captures the essence of individuality and self-expression, celebrating the beauty of staying true to oneself. Together, these songs create a soundtrack that uplifts, inspires, and connects me to the deeper facets of life.
+      <br><br>
+      <h1 align="center">Tap the image to listen to the song.</h1>
+   </p>
+  </center>
+
+  <div class="song-images">
+    <img src="myself/reminisensi.jpg" alt="Song 1" id="song1" onclick="playSong('audio1')">
+    <img src="myself/rahsia1.jpg" alt="Song 2" id="song2" onclick="playSong('audio2')">
+    <img src="myself/aura1.jpg" alt="Song 3" id="song3" onclick="playSong('audio3')">
+  </div>
+</section>
+
+<!-- Background sounds -->
+<audio id="audio1" src="song/reminisensi.mp3"></audio>
+<audio id="audio2" src="song/rahsia.mp3"></audio>
+<audio id="audio3" src="song/erni.mp3"></audio>
+
+<script>
+  let currentAudio = null; // Keeps track of the currently playing audio
+
+  function playSong(audioId) {
+    const audio = document.getElementById(audioId);
+
+    // If the same audio is already playing, pause it
+    if (currentAudio === audio && !audio.paused) {
+      audio.pause();
+      return; // Stop execution here
+    }
+
+    // Stop all other audio
+    const audios = document.querySelectorAll('audio');
+    audios.forEach(a => {
+      a.pause();
+      a.currentTime = 0; // Reset audio to start
+    });
+
+    // Play the selected audio
+    audio.play();
+    currentAudio = audio; // Set the currently playing audio
+  }
+</script>
+
+<style>
+  .section2 {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+
+  .section2 h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section2 p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .song-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .song-images img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .song-images img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+
+
+
+  <!-- Section 3: what i like to do -->
+
+  <section class="section3" id="section3">
+    <center><h2>What I Like To Do</h2>
+    <p>
+      I love exploring new places, whether it's traveling with friends or family, as each trip creates cherished memories and deepens our bonds. Along the way, food hunting adds an exciting twist to the journey, allowing me to savor diverse flavors and discover culinary gems. These adventures are my perfect blend of connection, exploration, and joy.
+    </p>
+    <video id="videoPlayer" width="800" height="400" border="5" controls>
+      <source src="myself/travel.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    <img src="myself/year.png" alt="Contact Image">
+  </section>
+
+  <!-- JavaScript for Scroll Animation -->
+  <script>
+    document.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+
+        if (sectionTop < window.innerHeight && sectionBottom >= 0) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+  
+ <!-- Footer -->
+  <footer>
+    <p>© 2024 Nurul Ain | All right reserved | <a href="#contact">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>
